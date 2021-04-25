@@ -10,11 +10,12 @@ app.listen(3030, () => {
 // Defino carpeta que devuelve archivos estáticos
 app.use(express.static('public'))
 
-// 
+// Llamado al archivo del home
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 
+// Llamado al archivo de las demás páginas
 app.get('/babbage', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/babbage.html'));
 });
